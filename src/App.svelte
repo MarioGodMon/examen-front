@@ -13,41 +13,34 @@
           <Route path="/">
               <!-- svelte-ignore element_invalid_self_closing_tag -->
               <div style="margin: 10px;" />
-              <h1>Ejercicios</h1>
+              <h1 style="font-size: 4rem; color: var(--golden)">Ejercicios</h1>
               <HrSat/>
               <div style="margin: 30px;" />
               <!-- svelte-ignore a11y-click-events-have-key-events -->
               <div class="container">
-                  <div class="componets-container-left">
-                      
-                          <!-- svelte-ignore a11y-no-static-element-interactions -->
-                          <div class="icon-container"on:click={() => navigate("/ejercicio1")}>
-                              <i class="fa-brands fa-codepen"></i>
-                              <p style="font-size: 1.4rem;">Ejercicio1</p>
-                          </div>
-                      <div style="margin: 20px;" />
-                          <!-- svelte-ignore a11y-no-static-element-interactions -->
-                          <div class="icon-container"on:click={() => navigate("/ejercicio2")}>
-                              <i class="fa-brands fa-codepen"></i>
-                              <p style="font-size: 1.4rem;">Ejercicio2</p>
-                          </div>
-                      <div style="margin: 20px;" />
-                  </div>
-                  <div class="componets-container-right">
-                          <!-- svelte-ignore a11y-no-static-element-interactions -->
-                          <div class="icon-container"on:click={() => navigate("/ejercicio3")}>
-                              <i class="fa-brands fa-codepen"></i>
-                              <p style="font-size: 1.4rem;">Ejercicio3</p>
-                          </div>
-                      <div style="margin: 20px;" />
-                          <!-- svelte-ignore a11y-no-static-element-interactions -->
-                          <div class="icon-container"on:click={() => navigate("/ejercicio4")}>
-                              <i class="fa-brands fa-codepen"></i>
-                              <p style="font-size: 1.4rem;">Ejercicio4</p>
-                          </div>
-                      <div style="margin: 20px;" />    
-                  </div>
-              </div>
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <div class="icon-container"on:click={() => navigate("/ejercicio1")}>
+                        <i class="fa-brands fa-codepen"></i>
+                        <p style="font-size: 3rem;">Ejercicio 1</p>
+                    </div>
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <div class="icon-container"on:click={() => navigate("/ejercicio2")}>
+                        <i class="fa-brands fa-codepen"></i>
+                        <p style="font-size: 3rem;">Ejercicio 2</p>
+                    </div>
+                </div>
+                <div class="container">
+                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <div class="icon-container"on:click={() => navigate("/ejercicio3")}>
+                        <i class="fa-brands fa-codepen"></i>
+                        <p style="font-size: 3rem;">Ejercicio 3</p>
+                    </div>
+                        <!-- svelte-ignore a11y-no-static-element-interactions -->
+                    <div class="icon-container"on:click={() => navigate("/ejercicio4")}>
+                        <i class="fa-brands fa-codepen"></i>
+                        <p style="font-size: 3rem;">Ejercicio 4</p>
+                    </div>
+                </div>
           </Route>
           <Route path="/ejercicio1">
               <!-- Ejemplos de Tooltips -->
@@ -93,17 +86,22 @@
       padding: 10px;
       background-color: #fff;
       align-items: center;
-      height: 80%;
+      height: 100%;
   }
 
   .container{
       display: grid;
-      width: 70%;
       grid-template-columns: 1fr 1fr;
+      width: 70%;
+      height: 100%;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      color: var(--soft-red);
   }
 
   .icon-container {
-      grid-column: 1;
+    border: 2px solid var(--golden);
       grid-row: 1;
       display: flex;
       justify-content: start;
