@@ -20,24 +20,24 @@
               <div class="container">
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <div class="icon-container"on:click={() => navigate("/ejercicio1")}>
-                        <i class="fa-brands fa-codepen"></i>
+                        <i class="fa-solid fa-file-signature"></i>
                         <p style="font-size: 3rem;">Ejercicio 1</p>
                     </div>
                     <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <div class="icon-container"on:click={() => navigate("/ejercicio2")}>
-                        <i class="fa-brands fa-codepen"></i>
+                        <i class="fa-solid fa-file-signature"></i>
                         <p style="font-size: 3rem;">Ejercicio 2</p>
                     </div>
                 </div>
                 <div class="container">
                         <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <div class="icon-container"on:click={() => navigate("/ejercicio3")}>
-                        <i class="fa-brands fa-codepen"></i>
+                        <i class="fa-solid fa-file-signature"></i>
                         <p style="font-size: 3rem;">Ejercicio 3</p>
                     </div>
                         <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <div class="icon-container"on:click={() => navigate("/ejercicio4")}>
-                        <i class="fa-brands fa-codepen"></i>
+                        <i class="fa-solid fa-file-signature"></i>
                         <p style="font-size: 3rem;">Ejercicio 4</p>
                     </div>
                 </div>
@@ -94,25 +94,31 @@
       grid-template-columns: 1fr 1fr;
       width: 70%;
       height: 100%;
-      padding: 10px;
+      padding: 0px 10px;
       align-items: center;
       justify-content: center;
       color: var(--soft-red);
   }
 
   .icon-container {
-    border: 2px solid var(--golden);
-      grid-row: 1;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 10%;
-      cursor: pointer;
+    border-radius: 10%;
+    grid-row: 1;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+    cursor: pointer;
+    padding: 10px;
+    height: 100%;
   }
+
+  .icon-container:hover{
+    background-color: rgba(237, 236, 236, 0.574);
+}
 
   .icon-container i {
       color: var(--golden);
-      font-size: 1.8rem;
+      font-size: 3rem;
   }
 
   @media (max-width: 950px) {
